@@ -20,24 +20,17 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_comboBox_activated(int index);
 
-   void on_refrash_clicked();
+   void load_ports();
+   void on_reffrash_clicked(bool checked);
 
-    void on_selected_port_clicked();
+   void on_com_port_list_currentIndexChanged(int index);
 
-   //void read_data();
-  //  void set_setting_port();
-
-   void on_vkl_clicked();
-   // void serial_data();
-
-   void on_close_port_clicked();
+   void on_selected_port_clicked();
 
    private:
     Ui::MainWindow *ui;
     QSerialPort *com_port;
     QComboBox com_port_list;
-    QString selected_port;
 };
 #endif // MAINWINDOW_H

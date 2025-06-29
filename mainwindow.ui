@@ -37,7 +37,7 @@
      <string>Выбрать порт</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="refrash">
+   <widget class="QPushButton" name="reffrash">
     <property name="geometry">
      <rect>
       <x>139</x>
@@ -152,19 +152,6 @@
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>430</y>
-      <width>101</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
    </widget>
    <widget class="QPushButton" name="close_port">
     <property name="geometry">
