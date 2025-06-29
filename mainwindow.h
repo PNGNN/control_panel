@@ -26,11 +26,11 @@ private slots:
 
     void on_selected_port_clicked();
 
-   void read_data();
-    void set_setting_port();
+   //void read_data();
+  //  void set_setting_port();
 
    void on_vkl_clicked();
-    void serial_data();
+   // void serial_data();
 
    void on_close_port_clicked();
 

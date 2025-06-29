@@ -15,10 +15,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 
 MainWindow::~MainWindow()
 {
-
     com_port->close();
-    delete com_port;
-     com_port=nullptr;
     delete ui;
 
 }
@@ -63,24 +60,24 @@ void MainWindow::on_selected_port_clicked()
     com_port->setFlowControl(QSerialPort::NoFlowControl);
     com_port->open(QIODevice::ReadWrite);
     com_port->write("Heel");
-    connect(com_port, SIGNAL(readyRead()), this, SLOT(read_data()));
+   // connect(com_port, SIGNAL(readyRead()), this, SLOT(read_data()));
     qDebug()<<"Open"<<&com_port_list;
 
 }
 
-void MainWindow::read_data()
+/*void MainWindow::read_data()
 {
     if(com_port&& com_port->isOpen()){
         QByteArray data=com_port->readAll();
         qDebug()<<""<<data;
     }
-}
+}*/
 
-void MainWindow::set_setting_port()
+/*void MainWindow::set_setting_port()
 {
 
 
-}
+}*/
 
 
 void MainWindow::on_vkl_clicked() //отправить
@@ -102,18 +99,21 @@ void MainWindow::on_vkl_clicked() //отправить
         qDebug()<<"not open";
 }
 
-void MainWindow::serial_data()
+/*void MainWindow::serial_data()
 {
     QByteArray byte_data;
     byte_data=com_port->readAll();
     ui->label->setText(byte_data.toHex());
-}
+}*/
 
 
 void MainWindow::on_close_port_clicked()
 {
-    com_port->close();
-    delete com_port;
-    com_port=nullptr;
+    while(com_port->isOpen()){
+        com_port->close();
+    }
+
+
+
 }
 
