@@ -62,9 +62,9 @@
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
     </property>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="vkl">
      <property name="text">
-      <string>PushButton</string>
+      <string>Вкл</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
@@ -88,7 +88,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -152,6 +152,32 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="close_port">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>460</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Закрыть порт</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
