@@ -53,7 +53,7 @@ void MainWindow::on_selected_port_clicked()
 {
 
 
-//11
+//11111
     /*if(com_port&&com_port->isOpen()){
         com_port->close();
         delete com_port;
