@@ -63,6 +63,17 @@
      <enum>Qt::Orientation::Horizontal</enum>
     </property>
     <widget class="QPushButton" name="vkl">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	selection-color: rgb(85, 85, 127);
+}
+QPushButton:Hover{
+background-color:blue;
+}
+QPushButton:toggled{
+background-color:black;
+}</string>
+     </property>
      <property name="text">
       <string>Вкл</string>
      </property>

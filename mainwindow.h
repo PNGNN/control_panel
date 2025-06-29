@@ -5,6 +5,7 @@
 #include<QSerialPort>
 #include<QSerialPortInfo>
 #include<QComboBox>
+#include <QPushButton>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -28,9 +29,13 @@ private slots:
 
    void on_selected_port_clicked();
 
+   void on_vkl_toggled(bool checked);
+
+
    private:
     Ui::MainWindow *ui;
     QSerialPort *com_port;
     QComboBox com_port_list;
+    QPushButton *toggle_vkl_btn;
 };
 #endif // MAINWINDOW_H
